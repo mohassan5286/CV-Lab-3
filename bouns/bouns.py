@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-SAMPLE = 1
+SAMPLE = 3
 
 def dp_stereo(Il, Ir, sigma=2, c0=1):
     
