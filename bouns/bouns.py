@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-SAMPLE = 3
+SAMPLE = 1
 
 def dp_stereo(Il, Ir, sigma=2, c0=1):
     
@@ -73,12 +73,20 @@ def dp_stereo(Il, Ir, sigma=2, c0=1):
             graph[row][0].append(i)
             graph[row][1].append(j)
 
-        if row in [64, 128, 256]:
-            plt.figure(figsize=[8, 8])
-            plt.plot(graph[row][0], graph[row][1])
-            plt.title(f'stereo-{SAMPLE}-{row}')
-            plt.savefig(f"stereo-{SAMPLE}-{row}.png")
+        # if row in [9, 128, 256]:
+            # plt.figure(figsize=[8, 8])
+            # plt.plot(graph[row][0], graph[row][1])
+            # plt.title(f'stereo-{SAMPLE}-{row}')
+            # plt.savefig(f"stereo-{SAMPLE}-{row}.png")
+            # break
 
+    plt.figure(figsize=[8, 8])
+    for row in range(H):
+        plt.plot(graph[row][0], graph[row][1], alpha=0.5)
+    plt.title(f'stereo-{SAMPLE}-rows')
+    plt.savefig(f"stereo-{SAMPLE}-rows.png")
+    plt.show()
+    # plt
         # If i > 0 here, it means we hit j=0. The remaining L pixels are occlusions.
         # Since disparity_left is init with 0s, we don't need to do anything.
 
