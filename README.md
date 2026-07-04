@@ -1,3 +1,4 @@
+
 <div align="center">
   <h1>👓 Stereo Vision: Disparity & Depth Estimation</h1>
   
@@ -70,14 +71,14 @@ The project includes a visualization tool to plot the optimal alignment path for
 ### Installation & Execution
 
 1. **Clone the repository:**
-   
+   ```bash
    git clone [https://github.com/OmarHani4306/stereo-vision-depth.git](https://github.com/OmarHani4306/stereo-vision-depth.git)
    cd stereo-vision-depth
 
 ```
 
 2. **Install dependencies:**
-
+```bash
 pip install numpy opencv-python matplotlib
 
 ```
@@ -106,5 +107,4 @@ python src/dynamic_programming.py
 
 * **Course:** CSED: Computer Vision (Fall 2025)
 * **Instructor:** Eng. Shereen Elkordi
-
 
